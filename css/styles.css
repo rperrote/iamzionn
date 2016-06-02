@@ -1,0 +1,583 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Catamaran:400,700,500);
+/* line 4, ../sass/neat/grid/_box-sizing.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/neat/grid/_box-sizing.scss */
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+/*//Include the outer-container mixin in the topmost container (to which the max-width setting will be applied):
+div.container {
+    @include outer-container;
+}
+
+// Then use span-columns on any element to specify the number of columns it should span:
+div.element {
+    @include span-columns(5);
+    border: 1px solid red;
+}
+
+// If the element’s parent isn’t the top-most container, 
+// you need to add the number of columns of the parent element to keep the right proportions:
+div.container {
+    @include outer-container;
+
+    div.parent-element {
+        @include span-columns(8);
+        border: 1px solid green;
+
+        div.element {
+            @include span-columns(5 of 8);
+            border: 1px solid blue;
+        }
+    }
+}
+
+//To make your layout responsive, use the media() mixin to modify both the grid and the layout:
+.my-class {
+    @include media($mobile) {
+        // As defined in _grid-settings.scss
+        @include span-columns(2);
+    }
+}
+/* line 55, ../sass/main.scss */
+body, input, #mc-embedded-subscribe {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 500;
+}
+
+/* line 58, ../sass/main.scss */
+section.table-setup .table .row:first-child, section.table-setup .table .row > p:first-child {
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 700;
+}
+
+/* line 62, ../sass/main.scss */
+h1 {
+  font-size: 67px;
+  line-height: 67px;
+}
+@media screen and (max-width: 768px) {
+  /* line 62, ../sass/main.scss */
+  h1 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+/* line 70, ../sass/main.scss */
+h2 {
+  font-size: 37px;
+}
+@media screen and (max-width: 768px) {
+  /* line 70, ../sass/main.scss */
+  h2 {
+    font-size: 28px;
+  }
+}
+
+/* line 76, ../sass/main.scss */
+h3 {
+  font-size: 28px;
+}
+@media screen and (max-width: 768px) {
+  /* line 76, ../sass/main.scss */
+  h3 {
+    font-size: 21px;
+  }
+}
+
+/* line 82, ../sass/main.scss */
+h4 {
+  font-size: 28px;
+}
+@media screen and (max-width: 768px) {
+  /* line 82, ../sass/main.scss */
+  h4 {
+    font-size: 16px;
+  }
+}
+
+/* line 88, ../sass/main.scss */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 92, ../sass/main.scss */
+input, button {
+  font-size: 21px;
+  text-decoration: none;
+}
+
+/* line 97, ../sass/main.scss */
+body {
+  background-image: -webkit-linear-gradient(top, #eeeeee 0%, #CCE9F8 100%);
+  background-image: linear-gradient(to bottom, #eeeeee 0%, #CCE9F8 100%);
+  color: #282828;
+}
+
+/* line 103, ../sass/main.scss */
+* {
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-smoothing: subpixel-antialiased;
+}
+
+/* line 108, ../sass/main.scss */
+div.outer-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 20, ../sass/bourbon/addons/_clearfix.scss */
+div.outer-container::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* line 110, ../sass/main.scss */
+div.outer-container > * {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 100%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 113, ../sass/main.scss */
+  div.outer-container > *.header, div.outer-container > *.footer {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header:last-child, div.outer-container > *.footer:last-child {
+    margin-right: 0;
+  }
+}
+/* line 117, ../sass/main.scss */
+div.outer-container > *.header.header, div.outer-container > *.footer.header {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+@media screen and (max-width: 768px) {
+  /* line 117, ../sass/main.scss */
+  div.outer-container > *.header.header, div.outer-container > *.footer.header {
+    padding-top: 20vh;
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header.header:last-child, div.outer-container > *.footer.header:last-child {
+    margin-right: 0;
+  }
+}
+/* line 126, ../sass/main.scss */
+div.outer-container > *.header.header > div:first-child, div.outer-container > *.footer.header > div:first-child {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 38.46154%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.header.header > div:first-child:last-child, div.outer-container > *.footer.header > div:first-child:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 126, ../sass/main.scss */
+  div.outer-container > *.header.header > div:first-child, div.outer-container > *.footer.header > div:first-child {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header.header > div:first-child:last-child, div.outer-container > *.footer.header > div:first-child:last-child {
+    margin-right: 0;
+  }
+}
+/* line 132, ../sass/main.scss */
+div.outer-container > *.header.header > div:first-child h1 > div, div.outer-container > *.footer.header > div:first-child h1 > div {
+  overflow: hidden;
+}
+/* line 134, ../sass/main.scss */
+div.outer-container > *.header.header > div:first-child h1 > div:first-child > div{
+  -webkit-animation: slideup 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  -moz-animation: slideup 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  animation: slideup 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+/* line 140, ../sass/main.scss */
+div.outer-container > *.header.header > div:first-child h1 > div:last-child > div{
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-animation: slidedownSelect 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  -moz-animation: slidedownSelect 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  animation: slidedownSelect 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+div.outer-container > *.header.header > div:first-child h1 > div:nth-child(2) > div{
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-animation: slidedown 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  -moz-animation: slidedown 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  animation: slidedown 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@-webkit-keyframes slideup {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+  }
+}
+@-moz-keyframes slideup {
+  from {
+    -moz-transform: translateY(100%);
+  }
+  to {
+    -moz-transform: translateY(0%);
+  }
+}
+@keyframes slideup {
+  from {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slidedown {
+  from {
+    -webkit-transform: translateY(-100%) translateX(50px);
+  }
+  to {
+    -webkit-transform: translateY(0%) translateX(50px);
+  }
+}
+@-moz-keyframes slidedown {
+  from {
+    -moz-transform: translateY(-100%) translateX(50px);
+  }
+  to {
+    -moz-transform: translateY(0%) translateX(50px);
+  }
+}
+@keyframes slidedown {
+  from {
+    -webkit-transform: translateY(-100%) translateX(50px);
+    -moz-transform: translateY(-100%) translateX(50px);
+    -ms-transform: translateY(-100%) translateX(50px);
+    -o-transform: translateY(-100%) translateX(50px);
+    transform: translateY(-100%) translateX(50px);
+  }
+  to {
+    -webkit-transform: translateY(0%) translateX(50px);
+    -moz-transform: translateY(0%) translateX(50px);
+    -ms-transform: translateY(0%) translateX(50px);
+    -o-transform: translateY(0%) translateX(50px);
+    transform: translateY(0%) translateX(50px);
+  }
+}
+
+@-webkit-keyframes slidedownSelect {
+  from {
+    -webkit-transform: translateY(-100%) translateX(100px);
+  }
+  to {
+    -webkit-transform: translateY(0%) translateX(100px);
+  }
+}
+@-moz-keyframes slidedownSelect {
+  from {
+    -moz-transform: translateY(-100%) translateX(100px);
+  }
+  to {
+    -moz-transform: translateY(0%) translateX(100px);
+  }
+}
+@keyframes slidedownSelect {
+  from {
+    -webkit-transform: translateY(-100%) translateX(100px);
+    -moz-transform: translateY(-100%) translateX(100px);
+    -ms-transform: translateY(-100%) translateX(100px);
+    -o-transform: translateY(-100%) translateX(100px);
+    transform: translateY(-100%) translateX(100px);
+  }
+  to {
+    -webkit-transform: translateY(0%) translateX(100px);
+    -moz-transform: translateY(0%) translateX(100px);
+    -ms-transform: translateY(0%) translateX(100px);
+    -o-transform: translateY(0%) translateX(100px);
+    transform: translateY(0%) translateX(100px);
+  }
+}
+/* line 165, ../sass/main.scss */
+div.outer-container > *.header.header > div:last-child, div.outer-container > *.footer.header > div:last-child {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 58.97436%;
+  position: relative;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.header.header > div:last-child:last-child, div.outer-container > *.footer.header > div:last-child:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 165, ../sass/main.scss */
+  div.outer-container > *.header.header > div:last-child, div.outer-container > *.footer.header > div:last-child {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header.header > div:last-child:last-child, div.outer-container > *.footer.header > div:last-child:last-child {
+    margin-right: 0;
+  }
+}
+/* line 174, ../sass/main.scss */
+div.outer-container > *.header.footer, div.outer-container > *.footer.footer {
+  min-height: 50vh;
+  padding-top: 20vh;
+}
+/* line 178, ../sass/main.scss */
+div.outer-container > *.header.footer > div:first-child, div.outer-container > *.footer.footer > div:first-child {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 48.71795%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.header.footer > div:first-child:last-child, div.outer-container > *.footer.footer > div:first-child:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 178, ../sass/main.scss */
+  div.outer-container > *.header.footer > div:first-child, div.outer-container > *.footer.footer > div:first-child {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header.footer > div:first-child:last-child, div.outer-container > *.footer.footer > div:first-child:last-child {
+    margin-right: 0;
+  }
+}
+/* line 184, ../sass/main.scss */
+div.outer-container > *.header.footer > div:first-child input, div.outer-container > *.header.footer > div:first-child button, div.outer-container > *.footer.footer > div:first-child input, div.outer-container > *.footer.footer > div:first-child button {
+  width: 75%;
+  text-align: left;
+  padding: 0;
+  margin-top: 16px;
+  padding-bottom: 4px;
+  decoration: none;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #282828;
+}
+/* line 4, ../sass/bourbon/css3/_placeholder.scss */
+div.outer-container > *.header.footer > div:first-child input::-webkit-input-placeholder, div.outer-container > *.header.footer > div:first-child button::-webkit-input-placeholder, div.outer-container > *.footer.footer > div:first-child input::-webkit-input-placeholder, div.outer-container > *.footer.footer > div:first-child button::-webkit-input-placeholder {
+  color: rgba(40, 40, 40, 0.25);
+}
+/* line 4, ../sass/bourbon/css3/_placeholder.scss */
+div.outer-container > *.header.footer > div:first-child input::-moz-placeholder, div.outer-container > *.header.footer > div:first-child button::-moz-placeholder, div.outer-container > *.footer.footer > div:first-child input::-moz-placeholder, div.outer-container > *.footer.footer > div:first-child button::-moz-placeholder {
+  color: rgba(40, 40, 40, 0.25);
+}
+/* line 4, ../sass/bourbon/css3/_placeholder.scss */
+div.outer-container > *.header.footer > div:first-child input:-moz-placeholder, div.outer-container > *.header.footer > div:first-child button:-moz-placeholder, div.outer-container > *.footer.footer > div:first-child input:-moz-placeholder, div.outer-container > *.footer.footer > div:first-child button:-moz-placeholder {
+  color: rgba(40, 40, 40, 0.25);
+}
+/* line 4, ../sass/bourbon/css3/_placeholder.scss */
+div.outer-container > *.header.footer > div:first-child input:-ms-input-placeholder, div.outer-container > *.header.footer > div:first-child button:-ms-input-placeholder, div.outer-container > *.footer.footer > div:first-child input:-ms-input-placeholder, div.outer-container > *.footer.footer > div:first-child button:-ms-input-placeholder {
+  color: rgba(40, 40, 40, 0.25);
+}
+/* line 199, ../sass/main.scss */
+div.outer-container > *.header.footer > div:first-child button, div.outer-container > *.footer.footer > div:first-child button {
+  border: 0;
+}
+/* line 203, ../sass/main.scss */
+div.outer-container > *.header.footer > div:last-child, div.outer-container > *.footer.footer > div:last-child {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 48.71795%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.header.footer > div:last-child:last-child, div.outer-container > *.footer.footer > div:last-child:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 203, ../sass/main.scss */
+  div.outer-container > *.header.footer > div:last-child, div.outer-container > *.footer.footer > div:last-child {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header.footer > div:last-child:last-child, div.outer-container > *.footer.footer > div:last-child:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 218, ../sass/main.scss */
+  div.outer-container > *.header > div:last-child, div.outer-container > *.footer > div:last-child {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.header > div:last-child:last-child, div.outer-container > *.footer > div:last-child:last-child {
+    margin-right: 0;
+  }
+}
+/* line 225, ../sass/main.scss */
+div.outer-container > *.table-setup .table {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 100%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.table-setup .table:last-child {
+  margin-right: 0;
+}
+/* line 227, ../sass/main.scss */
+div.outer-container > *.table-setup .table .row {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 100%;
+  text-align: left;
+  border-top: 1px solid rgba(40, 40, 40, 0.05);
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.table-setup .table .row:last-child {
+  margin-right: 0;
+}
+/* line 231, ../sass/main.scss */
+div.outer-container > *.table-setup .table .row:first-child {
+  border-bottom: 2px solid #282828;
+}
+@media screen and (max-width: 768px) {
+  /* line 231, ../sass/main.scss */
+  div.outer-container > *.table-setup .table .row:first-child {
+    display: none;
+  }
+}
+/* line 237, ../sass/main.scss */
+div.outer-container > *.table-setup .table .row.confidential span {
+  color: #282828;
+  background-color: #282828;
+  padding: 2px;
+}
+/* line 242, ../sass/main.scss */
+div.outer-container > *.table-setup .table .row > p {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 48.71795%;
+}
+/* line 89, ../sass/neat/grid/_span-columns.scss */
+div.outer-container > *.table-setup .table .row > p:last-child {
+  margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  /* line 242, ../sass/main.scss */
+  div.outer-container > *.table-setup .table .row > p {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 100%;
+  }
+  /* line 89, ../sass/neat/grid/_span-columns.scss */
+  div.outer-container > *.table-setup .table .row > p:last-child {
+    margin-right: 0;
+  }
+}
+
+.selection {
+    color: rgba(0, 0, 0, 0);
+
+}
+::selection{
+    background-color: black;
+    color: white;
+}
+.cross{
+    position: absolute;
+    top: 0;
+    letter-spacing: -3px;
+    left: 0;
+    color: rgba(0, 0, 0, 0);
+}
+.cross::selection{
+    color: #2E2F30;
+    background-color: transparent;
+}
