@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Catamaran:400,700,500);
+
 html {
   box-sizing: border-box;
 }
@@ -23,6 +24,7 @@ h1 {
   font-size: 67px;
   line-height: 67px;
 }
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 50px;
@@ -68,9 +70,11 @@ input, button {
 }
 
 body {
-  background-image: -webkit-linear-gradient(top, #eeeeee 0%, #CCE9F8 100%);
-  background-image: linear-gradient(to bottom, #eeeeee 0%, #CCE9F8 100%);
-  color: #282828;
+  /*background-image: -webkit-linear-gradient(top, #eeeeee 0%, #CCE9F8 100%);*/
+  /*background-image: linear-gradient(to bottom, #eeeeee 0%, #CCE9F8 100%);*/
+  background: #2e3a40;
+  overflow: hidden;
+  color: #80CBC4;
 }
 
 * {
@@ -462,12 +466,12 @@ div.outer-container > *.table-setup .table .row > p:last-child {
 }
 
 .selection {
-    color: rgba(0, 0, 0, 0);
-
+    /*color: rgba(0, 0, 0, 0);*/
 }
+
 ::selection{
     background-color: transparent;
-    color: #282828;
+    user-select: none;
 }
 .cross{
     position: absolute;
@@ -494,3 +498,41 @@ i ~ .selection{
   background-color: #282828;
   padding: 2px;
 }
+
+h1.tag:before {
+    content: '<h1>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #7b7b7c;
+    font-size: 18px;
+    position: absolute;
+    font-weight: normal;
+    margin-top: -45px;
+    left:-20px;
+}
+h1.tag:after {
+    content: '</h1>';
+    font-family: 'La Belle Aurore', cursive;
+    color: #7b7b7c;
+    font-size: 18px;
+    position: absolute;
+    left:-40px;
+    bottom:-45px;
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.tags {
+    color: #7b7b7c;
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+    font-size: 18px;
+    font-family: 'La Belle Aurore',cursive
+}
+
+.top-tags {
+    bottom: auto;
+    top: 25px;
+    left: 25px;
+}
+
